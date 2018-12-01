@@ -151,23 +151,31 @@ public class AsYouTypeFormatter: NSObject, UITextViewDelegate {
     public func typeFormatter(isDelimiter character: Character) -> Bool {
         return character == " " || character == "\n"
     }
+    
+    private func characterSetNil() {
+        // NOTE: didSet does not invoke on nil being set on optional properties.
+        if character != nil {
+            delegate?.typeFormatter(self, characterPrefixDidChange: nil)
+        }
+        character = nil
+    }
 
     public func textViewDidChangeSelection(_ textView: UITextView) {
         guard let firstWord = textView.text[0..<textView.selectedRange.lowerBound]
             .reversed().enumerated().first(where: { _, character -> Bool in
                 attributes(fromCharacter: character) != nil
             }) else {
-                character = nil
+                characterSetNil()
                 return
         }
         // If not delimiter, we provide a recommendation range.
         guard attributes[firstWord.element] != nil else {
-            character = nil
+            characterSetNil()
             return
         }
         // If user is selecting multiple characters, don't provide suggestions.
         guard textView.selectedRange.length == 0 else {
-            character = nil
+            characterSetNil()
             return
         }
         character = firstWord.element
