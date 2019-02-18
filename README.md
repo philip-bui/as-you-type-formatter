@@ -66,13 +66,13 @@ AsYouTypeFormatter.tagAttributes = [NSAttributedString.Key.font: UIFont.boldSyst
 AsYouTypeFormatter.mentionAttributes = [NSAttributedString.Key.font: UIFont.italicSystemFont(ofSize: 16)]
 
 // ViewController.swift - Customize own character prefixes and formats.
-private var typeFormatter: AsYouTypeFormatter {
-    let typeFormatter = AsYouTypeFormatter(delegate: self, attributes: [
+private lazy var typeFormatter: AsYouTypeFormatter = {
+    // Implicit return.
+    AsYouTypeFormatter(delegate: self, attributes: [
 	"#": [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)],
 	nil: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
     ])
-    return typeFormatter
-}
+}()
 ```
  
 ## Design Decisions
