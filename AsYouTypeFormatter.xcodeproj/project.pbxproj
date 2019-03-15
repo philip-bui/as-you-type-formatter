@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D4127EE62217DDFF00CF4C72 /* AsYouTypeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4127EE52217DDFF00CF4C72 /* AsYouTypeFormatter.swift */; };
-		D4127EE92217DE3800CF4C72 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4127EE82217DE3800CF4C72 /* String.swift */; };
-		D4127F132217EC9F00CF4C72 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4127EE82217DE3800CF4C72 /* String.swift */; };
+		D4127EE92217DE3800CF4C72 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4127EE82217DE3800CF4C72 /* Character.swift */; };
+		D4127F132217EC9F00CF4C72 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4127EE82217DE3800CF4C72 /* Character.swift */; };
 		D4127F142217EC9F00CF4C72 /* AsYouTypeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4127EE52217DDFF00CF4C72 /* AsYouTypeFormatter.swift */; };
 /* End PBXBuildFile section */
 
@@ -17,7 +17,7 @@
 		D4127EDA2217DB3800CF4C72 /* AsYouTypeFormatter_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsYouTypeFormatter_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4127EDE2217DB3900CF4C72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4127EE52217DDFF00CF4C72 /* AsYouTypeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsYouTypeFormatter.swift; sourceTree = "<group>"; };
-		D4127EE82217DE3800CF4C72 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		D4127EE82217DE3800CF4C72 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		D4127F092217EB5700CF4C72 /* AsYouTypeFormatter_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsYouTypeFormatter_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,7 +69,7 @@
 		D4127EE72217DE2D00CF4C72 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D4127EE82217DE3800CF4C72 /* String.swift */,
+				D4127EE82217DE3800CF4C72 /* Character.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -188,7 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4127EE92217DE3800CF4C72 /* String.swift in Sources */,
+				D4127EE92217DE3800CF4C72 /* Character.swift in Sources */,
 				D4127EE62217DDFF00CF4C72 /* AsYouTypeFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4127F132217EC9F00CF4C72 /* String.swift in Sources */,
+				D4127F132217EC9F00CF4C72 /* Character.swift in Sources */,
 				D4127F142217EC9F00CF4C72 /* AsYouTypeFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'AsYouTypeFormatter'
-  s.version = '1.0.0'
+  s.version = '1.1.0'
   s.license= { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'As You Type Formatter.'
   s.description = 'Format text as you type, given certain character prefixes such as hashtags and mentions.'

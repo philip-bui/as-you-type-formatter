@@ -1,6 +1,5 @@
 # As You Type Formatter
 [![CI Status](http://img.shields.io/travis/philip-bui/as-you-type-formatter.svg?style=flat)](https://travis-ci.org/philip-bui/as-you-type-formatter)
-[![CodeCov](https://codecov.io/gh/philip-bui/as-you-type-formatter/branch/master/graph/badge.svg)](https://codecov.io/gh/philip-bui/as-you-type-formatter)
 [![Version](https://img.shields.io/cocoapods/v/AsYouTypeFormatter.svg?style=flat)](http://cocoapods.org/pods/AsYouTypeFormatter)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/cocoapods/p/AsYouTypeFormatter.svg?style=flat)](http://cocoapods.org/pods/AsYouTypeFormatter)
@@ -39,13 +38,13 @@ github "philip-bui/as-you-type-formatter"
 
 ### Swift Package Manager
 
-The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but As You Type Formatter does support its use on supported platforms.
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but AsYouTypeFormatter does support its use on supported platforms.
 
 Once you have your Swift package set up, adding AsYouTypeFormatter as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/philip-bui/as-you-type-formatter.git", from: "1.0.0"))
+    .package(url: "https://github.com/philip-bui/as-you-type-formatter.git", from: "1.1.0"))
 ]
 ```
 
@@ -53,7 +52,7 @@ dependencies: [
 
 - Character Prefix. Default `#` `@`, words beginning with character prefixes use their assigned text attributes.
 
-- Delimiters. Default ` ` `\n`, delimiters indicate when a word has ended to use normal text attributes.
+- Delimiters. Default emojis and non-alphanumeric characters, delimiters indicate when a word has ended to use normal text attributes.
 
 AsYouTypeFormatter overrides two `UITextView` methods, `textView(shouldChangeTextIn:text:)` and `textViewDidChangeSelection()`. You can delegate your `UITextView` or call the methods within your own delegate.
 
@@ -77,7 +76,7 @@ private lazy var typeFormatter: AsYouTypeFormatter = {
  
 ## Design Decisions
 
-- Default Delimiters. The default delimiters are ` ` and `\n`. This means that other special characters `?` do not delimit a word, but delegate methods can customize this.
+- Default Delimiters. The default delimiters are Emojis, and characters not in Unicode Category L* or 0-9. Delegate methods can customize this.
 - No suggestion support for `UITextField`. Suggestion support replies on detecting when the user selects a new word, and `UITextFieldDelegate` doesn't expose text selection events.
 - Link supports. Enabling selectable and clickable text is not very practical.
 - On multi-text selection, suggestions are disabled. The assumption is that text is usually selected when the user wants to copy and paste.
