@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'AsYouTypeFormatter'
-  s.version = '1.1.0'
+  s.version = '1.1.1'
   s.license= { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'As You Type Formatter.'
   s.description = 'Format text as you type, given certain character prefixes such as hashtags and mentions.'
@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
 
-  s.source_files = 'Sources/*.swift', 'Sources/*/*.swift'
+  s.source_files = 'Sources/**/*.swift'
   s.swift_version = '4.2'
 end
